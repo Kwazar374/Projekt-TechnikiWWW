@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GameBlog - Strona główna</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Skip-link for accessibility -->
+  <a href="#main" class="skip-link">Przejdź do treści</a>
+  <div class="overlay" data-overlay></div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo">
+        <!-- Aria-hidden=true means this element is decorative and should be ignored by screen readers -->
+        <div class="logo-mark" aria-hidden="true">GB</div>
+        <div class="logo-text">
+          <span>GameBlog</span>
+          <span>Recenzje gier komputerowych</span>
+        </div>
+      </div>
+
+      <!-- Nav element with aria-label for accessibility -->
+      <nav class="main-nav" aria-label="Główne menu">
+        <ul class="nav-list">
+          <!-- Aria-current="page" to indicate the current page -->
+          <li><a class="nav-link" href="index.html" aria-current="page">Strona główna</a></li>
+          <li class="nav-dropdown">
+            <button
+              class="nav-dropdown-toggle"
+              type="button"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Recenzje
+              <span aria-hidden="true">▾</span>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a href="kategoria-rpg.html">RPG</a></li>
+              <li><a href="kategoria-fps.html">FPS</a></li>
+              <li><a href="kategoria-indie.html">Indie</a></li>
+            </ul>
+          </li>
+          <li><a class="nav-link" href="o-mnie.html">O mnie</a></li>
+        </ul>
+      </nav>
+
+      <button
+        class="menu-toggle"
+        id="menu-open"
+        type="button"
+        aria-label="Otwórz menu"
+        aria-expanded="false"
+        aria-controls="mobile-nav"
+      >
+        ☰
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile slide-out menu -->
+  <nav
+    class="mobile-nav"
+    id="mobile-nav"
+    aria-label="Menu mobilne"
+    aria-hidden="true"
+  >
+    <div class="mobile-nav-header">
+      <h2>Menu</h2>
+      <button
+        class="menu-toggle"
+        id="menu-close"
+        type="button"
+        aria-label="Zamknij menu"
+      >
+        <
+      </button>
+    </div>
+    <ul>
+      <li><a href="index.html">Strona główna</a></li>
+      <li><a href="kategoria-rpg.html">Recenzje gier RPG</a></li>
+      <li><a href="kategoria-fps.html">Recenzje gier FPS</a></li>
+      <li><a href="kategoria-indie.html">Recenzje gier Indie</a></li>
+      <li><a href="o-mnie.html">O mnie</a></li>
+    </ul>
+  </nav>
+
+  <main id="main" class="wrapper">
+    <!-- Hero / Intro -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="hero-box">
+        <p class="hero-label">Blog o grach</p>
+        <h1 class="hero-title" id="hero-heading">Witaj na moim blogu!</h1>
+        <p class="hero-text">
+          Piszę tu o grach, w które sam gram - na luzie i dosyć
+          subiektywnie. Do moich ulubionych gatunków należą gry RPG, FPS oraz gry Indie. Jeśli szukasz recenzji tworzonych przez gracza dla graczy,
+          to znalazłeś/aś się w idealnym miejscu.
+        </p>
+        <a href="wszystkie-recenzje.html" class="btn-primary">Przejdź do recenzji</a>
+      </div>
+    </section>
+
+    <!-- Ostatnie recenzje -->
+    <section aria-labelledby="posts-heading" id="posts">
+      <h2 class="section-heading" id="posts-heading">Ostatnie recenzje</h2>
+
+      <div class="posts-grid">
+        <!-- Kingdom Come Deliverance 2 -->
+        <article class="post-card">
+          <p class="post-meta">RPG • 2025</p>
+          <h3 class="post-title">
+            <a href="recenzja-kcd2.html">Kingdom Come: Deliverance II</a>
+          </h3>
+          <p class="post-excerpt">
+            Pełne detali średniowieczne miasta i wsie, świetna fabuła i interesujący system walki - KCD2 wciąga od pierwszych minut i daje ogromną satysfakcję z każdej chwili spędzonej z grą.
+          </p>
+          <span class="tag tag-rpg">RPG</span>
+        </article>
+
+        <!-- Silksong -->
+        <article class="post-card">
+          <p class="post-meta">Indie • 2025</p>
+          <h3 class="post-title">
+            <a href="recenzja-silksong.html">Hollow Knight: Silksong</a>
+          </h3>
+          <p class="post-excerpt">
+            Soulslike metroidvania dużo bardziej wymagająca niż poprzednik - szybkość i precyzyjna są tu nieodzowne na każdym kroku.
+          </p>
+          <span class="tag tag-indie">Indie</span>
+        </article>
+
+        <!-- Metal Eden -->
+        <article class="post-card">
+          <p class="post-meta">FPS • 2025</p>
+          <h3 class="post-title">
+            <a href="recenzja-metal-eden.html">Metal Eden</a>
+          </h3>
+          <p class="post-excerpt">
+            Polski FPS, który zaskakuje świetnym tempem akcji, piękną oprawą graficzną i wyjątkowo satysfakcjonującą walką - zdecydowanie warto dać mu szansę.
+          </p>
+          <span class="tag tag-fps">FPS</span>
+        </article>
+      </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter" aria-labelledby="newsletter-heading">
+      <div class="newsletter-box">
+        <div class="newsletter-text">
+          <h2 id="newsletter-heading">Newsletter o nowych postach</h2>
+          <p>
+            Jeśli chcesz raz na jakiś czas dostać info o nowych recenzjach, zostaw swój
+            e-mail. Żadnego spamu, tylko gry.
+          </p>
+        </div>
+        <form class="newsletter-form" id="newsletter-form" novalidate>
+          <label for="newsletter-email">Adres e-mail</label>
+          <input
+            type="email"
+            id="newsletter-email"
+            name="email"
+            required
+            placeholder="np. jan.kowalski@example.com"
+            aria-required="true"
+          />
+          <button type="submit" class="btn-primary">Zapisz się</button>
+          <p class="newsletter-error" id="newsletter-error" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Popup -->
+  <section
+    class="popup"
+    id="newsletter-popup"
+    role="dialog"
+    aria-modal="true"
+    aria-hidden="true"
+    aria-labelledby="newsletter-popup-title"
+  >
+    <div class="popup-content">
+      <header class="popup-header">
+        <h2 id="newsletter-popup-title">Dziękuję za zapis!</h2>
+      </header>
+      <div class="popup-body">
+        <p>
+          Twój e-mail został zapisany (w tej wersji tylko “na niby”, bo strona jest
+          statyczna). Gdyby to był prawdziwy blog, tu byłaby informacja o wysłaniu
+          potwierdzenia.
+        </p>
+      </div>
+      <footer class="popup-footer">
+        <button class="btn-primary" type="button" data-popup-close>OK</button>
+      </footer>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>© 2025 GameBlog - Recenzje gier komputerowych.</p>
+      <nav aria-label="Linki w stopce">
+        <a href="wszystkie-recenzje.html">Recenzje</a>
+        <a href="o-mnie.html">O mnie</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

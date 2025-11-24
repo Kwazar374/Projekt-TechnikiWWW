@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GameBlog - Wszystkie recenzje</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Skip-link for accessibility -->
+  <a href="#main" class="skip-link">Przejdź do treści</a>
+  <div class="overlay" data-overlay></div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo">
+        <!-- Decorative logo mark -->
+        <div class="logo-mark" aria-hidden="true">GB</div>
+        <div class="logo-text">
+          <span>GameBlog</span>
+          <span>Recenzje gier komputerowych</span>
+        </div>
+      </div>
+
+      <!-- Main navigation -->
+      <nav class="main-nav" aria-label="Główne menu">
+        <ul class="nav-list">
+          <li><a class="nav-link" href="index.html">Strona główna</a></li>
+          <li class="nav-dropdown">
+            <button
+              class="nav-dropdown-toggle"
+              type="button"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Recenzje
+              <span aria-hidden="true">▾</span>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a href="kategoria-rpg.html">RPG</a></li>
+              <li><a href="kategoria-fps.html">FPS</a></li>
+              <li><a href="kategoria-indie.html">Indie</a></li>
+            </ul>
+          </li>
+          <li><a class="nav-link" href="o-mnie.html">O mnie</a></li>
+        </ul>
+      </nav>
+
+      <!-- Mobile menu toggle -->
+      <button
+        class="menu-toggle"
+        id="menu-open"
+        type="button"
+        aria-label="Otwórz menu"
+        aria-expanded="false"
+        aria-controls="mobile-nav"
+      >
+        ☰
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile slide-out menu -->
+  <nav
+    class="mobile-nav"
+    id="mobile-nav"
+    aria-label="Menu mobilne"
+    aria-hidden="true"
+  >
+    <div class="mobile-nav-header">
+      <h2>Menu</h2>
+      <button
+        class="menu-toggle"
+        id="menu-close"
+        type="button"
+        aria-label="Zamknij menu"
+      >
+        <
+      </button>
+    </div>
+    <ul>
+      <li><a href="index.html">Strona główna</a></li>
+      <li><a href="kategoria-rpg.html">Recenzje gier RPG</a></li>
+      <li><a href="kategoria-fps.html">Recenzje gier FPS</a></li>
+      <li><a href="kategoria-indie.html">Recenzje gier Indie</a></li>
+      <li><a href="o-mnie.html">O mnie</a></li>
+    </ul>
+  </nav>
+
+  <main id="main" class="wrapper">
+    <section aria-labelledby="all-reviews-heading" id="posts">
+      <h1 class="section-heading" id="all-reviews-heading">Wszystkie recenzje</h1>
+      <p style="margin-bottom: 1rem; font-size: 0.95rem; color: #4b5563;">
+        Poniżej znajdziesz wszystkie recenzje opublikowane na blogu - niezależnie od
+        kategorii. Jeśli wolisz, możesz też przejść do konkretnych działów z menu
+        <strong>Recenzje</strong> u góry strony.
+      </p>
+
+      <div class="posts-grid">
+        <!-- Kingdom Come Deliverance II -->
+        <article class="post-card">
+          <p class="post-meta">RPG • 2025</p>
+          <h2 class="post-title">
+            <a href="recenzja-kcd2.html">Kingdom Come: Deliverance II</a>
+          </h2>
+          <p class="post-excerpt">
+            Pełne detali średniowieczne miasta i wsie, świetna fabuła i interesujący system walki – KCD2 wciąga od pierwszych minut i daje ogromną satysfakcję z każdej chwili spędzonej z grą.
+          </p>
+          <span class="tag tag-rpg">RPG</span>
+        </article>
+
+        <!-- Hollow Knight: Silksong -->
+        <article class="post-card">
+          <p class="post-meta">Indie • 2025</p>
+          <h2 class="post-title">
+            <a href="recenzja-silksong.html">Hollow Knight: Silksong</a>
+          </h2>
+          <p class="post-excerpt">
+            Soulslike metroidvania dużo bardziej wymagająca niż poprzednik - szybkość i precyzja są tu nieodzowne na każdym kroku.
+          </p>
+          <span class="tag tag-indie">Indie</span>
+        </article>
+
+        <!-- Metal Eden -->
+        <article class="post-card">
+          <p class="post-meta">FPS • 2025</p>
+          <h2 class="post-title">
+            <a href="recenzja-metal-eden.html">Metal Eden</a>
+          </h2>
+          <p class="post-excerpt">
+            Polski FPS, który zaskakuje świetnym tempem akcji, piękną oprawą graficzną i wyjątkowo satysfakcjonującą walką – zdecydowanie warto dać mu szansę.
+          </p>
+          <span class="tag tag-fps">FPS</span>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>© 2025 GameBlog - Recenzje gier komputerowych.</p>
+      <nav aria-label="Linki w stopce">
+        <a href="wszystkie-recenzje.html" aria-current="page">Recenzje</a>
+        <a href="o-mnie.html">O mnie</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
